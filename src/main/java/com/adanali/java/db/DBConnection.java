@@ -8,4 +8,11 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
+    public Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(
+                DBConfig.URL,
+                DBConfig.USER,
+                DBConfig.PASSWORD
+        );
+    }
 }
