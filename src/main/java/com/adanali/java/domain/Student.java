@@ -7,7 +7,11 @@ public class Student {
     private String gender;
 
     public Student(int id, String name, String email, String gender) {
+        this(name,email,gender);
         this.id = id;
+    }
+
+    public Student(String name, String email, String gender) {
         this.name = name;
         this.email = email;
         this.gender = gender;
