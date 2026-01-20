@@ -1,6 +1,5 @@
 package com.adanali.java.service;
 
-import com.adanali.java.dao.JDBCStudentDao;
 import com.adanali.java.dao.StudentDao;
 import com.adanali.java.domain.Student;
 

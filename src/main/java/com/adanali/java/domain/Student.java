@@ -1,10 +1,21 @@
 package com.adanali.java.domain;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "students")
 public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false, unique = true)
     private String email;
+    @Column(nullable = false)
     private String gender;
+
+    protected Student() {}
 
     public Student(int id, String name, String email, String gender) {
         this(name,email,gender);

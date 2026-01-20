@@ -1,6 +1,6 @@
 package com.adanali.java.App;
 
-import com.adanali.java.dao.JDBCStudentDao;
+import com.adanali.java.dao.HibernateStudentDao;
 import com.adanali.java.dao.StudentDao;
 import com.adanali.java.domain.Student;
 import com.adanali.java.service.StudentService;
@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
-    private static final StudentDao dao = new JDBCStudentDao();
+    private static final StudentDao dao = new HibernateStudentDao();
     private static final StudentService studentService = new StudentService(dao);
 
     public static void main(String[] args) {
